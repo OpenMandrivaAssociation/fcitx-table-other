@@ -22,7 +22,7 @@ provides additional tables.
 
 %build
 %cmake
-%ake
+%make
 
 %install
 %makeinstall_std -C build
