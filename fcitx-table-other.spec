@@ -21,8 +21,9 @@ provides additional tables.
 %setup -q
 
 %build
-%cmake
-%make -j1
+# (tpg) building in a clean dir fails
+%cmake .
+%make
 
 %install
 %makeinstall_std -C build
