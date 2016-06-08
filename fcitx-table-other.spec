@@ -6,6 +6,7 @@ Group:		System/Internationalization
 License:	GPLv3+
 URL:		https://fcitx-im.org/wiki/Fcitx
 Source0:	http://download.fcitx-im.org/fcitx-table-other/%{name}-%{version}.tar.xz
+Patch0:		0001-table-other-fix-build.patch
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(fcitx)
 BuildRequires:	gettext
@@ -19,10 +20,11 @@ provides additional tables.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 # (tpg) building in a clean dir fails
-%cmake .
+%cmake
 %make
 
 %install
