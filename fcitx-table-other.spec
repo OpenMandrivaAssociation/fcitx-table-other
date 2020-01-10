@@ -20,7 +20,7 @@ provides additional tables.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 # (tpg) building in a clean dir fails
